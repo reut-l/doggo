@@ -1,0 +1,125 @@
+/* Home Banner Area css
+============================================================================================ */
+
+.home_banner_area {
+  z-index: 1;
+  min-height: 100vh;
+  position: relative;
+  background: url(../img/home-banner.jpg) no-repeat center;
+  background-size: cover;
+
+  .banner_inner {
+    position: absolute;
+    width: 450px !important;
+    left: 50px;
+    top: 100px;
+    background-color: rgba($color: #aaaaaa, $alpha: 0.7);
+    border-radius: 50px;
+    padding: 15px;
+    z-index: 10;
+
+    .banner_content {
+      h2 {
+        font-size: 48px;
+        font-weight: 500;
+      }
+      p {
+        font-size: 35px;
+        color: $title-color;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .home_banner_area {
+    .banner_inner {
+      width: 300px !important;
+      padding: 5px;
+      max-height: 400px;
+      top: auto;
+      bottom: 10px;
+      left: 10px;
+
+      .banner_content {
+        position: relative;
+        top: -80px;
+
+        h4,
+        h2 {
+          margin: 20px !important;
+        }
+      }
+    }
+  }
+}
+
+.banner_area {
+  position: relative;
+  z-index: 1;
+  height: 200px;
+  padding-top: 0 !important;
+  .banner_inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 200px;
+    z-index: 1;
+    .overlay {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba($title-color, 0.65);
+    }
+    .banner_content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      h2 {
+        color: #fff;
+        font-size: 45px;
+        margin-bottom: 0px;
+      }
+      .page_link {
+        display: inline-block;
+        padding: 7px 20px;
+        a {
+          font-size: 15px;
+          color: #fff;
+          font-family: $primary-font;
+          margin-right: 20px;
+          position: relative;
+          text-transform: capitalize;
+          &:before {
+            content: "/";
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          &:last-child {
+            margin-right: 0px;
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .banner_area {
+    height: 100px;
+    .banner_inner {
+      .overlay {
+        bottom: auto;
+        height: 135px;
+      }
+    }
+  }
+}

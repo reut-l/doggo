@@ -1,0 +1,73 @@
+/* =================================== */
+
+/*  Footer Styles
+/* =================================== */
+
+.footer-area {
+  background: $title-color;
+
+  .single-footer-widget {
+    @media (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+    h4 {
+      color: #ffffff;
+      margin-bottom: 35px;
+      @media (max-width: 1024px) {
+        font-size: 18px;
+      }
+      @media (max-width: 991px) {
+        margin-bottom: 15px;
+      }
+    }
+    ul {
+      padding-left: 0;
+      li {
+        margin-bottom: 15px;
+        list-style: none;
+        a {
+          @include transition();
+          color: $text-color;
+          &:hover {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    .form-wrap {
+      margin-top: 25px;
+    }
+    input {
+      height: 40px;
+      border: none;
+      width: 80% !important;
+      font-weight: 300;
+      background: #334f6c;
+      color: #ffffff;
+      border-radius: 0;
+      font-size: 14px;
+      padding: 10px;
+      padding-left: 20px;
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+  .footer-bottom {
+    margin: 15px 0;
+    a {
+      color: $primary-color;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-area {
+    max-height: 150px;
+    padding: 15px 10px;
+    .footer-bottom {
+      margin-bottom: 0px;
+    }
+  }
+}

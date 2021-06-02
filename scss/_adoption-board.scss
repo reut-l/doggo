@@ -1,0 +1,55 @@
+.board_area {
+  .addBtn {
+    margin-bottom: 25px;
+  }
+  button:disabled,
+  button[disabled] {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  }
+
+  .adopt_card_img {
+    height: 300px;
+    overflow: hidden;
+  }
+  .adopt_card_body {
+    min-height: 111px;
+    padding: 5px;
+    border-top: 1px solid #dddddd;
+    .adopt_card_text {
+      line-height: 18px;
+      height: fit-content;
+      #readMoreBtn,
+      #readLessBtn {
+        color: blue;
+      }
+    }
+  }
+  .adopt_card_footer {
+    color: #333333;
+    padding-top: 18px;
+    background-color: #dddddd;
+    line-height: 16px;
+    height: 155px;
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+    .posted_line {
+      line-height: 30px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .board_area {
+    margin-top: 20px;
+    .heading {
+      z-index: 90;
+      width: 250px;
+      position: relative;
+      margin: auto;
+    }
+  }
+}

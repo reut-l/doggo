@@ -1,0 +1,80 @@
+//header_area css
+.header_area {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  transition: background 0.4s, all 0.3s linear;
+  .navbar {
+    background: transparent;
+    padding: 0px;
+    border: 0px;
+    border-radius: 0px;
+    width: 100%;
+    .container {
+      position: relative;
+      margin: auto;
+      min-width: 100%;
+      img {
+        border-radius: 10px;
+        opacity: 0.85;
+      }
+    }
+    .nav {
+      .nav-item {
+        margin-left: 30px;
+
+        .nav-link {
+          font: 500 14px/80px $title-font;
+          text-transform: capitalize;
+          color: $title-color;
+          padding: 0px;
+          display: inline-block;
+          @media (max-width: 991px) {
+            color: #ffffff;
+          }
+          &:after {
+            display: none;
+          }
+        }
+        &:hover,
+        &.active {
+          .nav-link {
+            color: $primary-color;
+          }
+        }
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}
+#left-nav {
+  width: 75%;
+}
+#right-nav {
+  width: 25%;
+}
+.user_nav-item {
+  margin-left: 30px;
+  color: $label-color;
+  position: absolute;
+  right: 22%;
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50% !important;
+  }
+  @media (max-width: 991px) {
+    display: none;
+  }
+  .nav-link {
+    font: 500 14px/80px $title-font;
+    text-transform: capitalize;
+    padding: 0px;
+    display: inline-block;
+    @media (max-width: 991px) {
+      color: #ffffff;
+    }
+  }
+}

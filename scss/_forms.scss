@@ -1,0 +1,157 @@
+form {
+  width: fit-content;
+  padding: 30px;
+  border: 1px solid $title-color;
+  border-radius: 20px;
+  position: relative;
+  margin: auto;
+
+  label {
+    color: $label-color;
+    font-weight: 500;
+  }
+  input {
+    margin-left: 15px;
+    border-radius: 5px;
+    border: 1px solid #666666;
+  }
+  input::placeholder {
+    color: transparent;
+  }
+  .err {
+    color: red;
+  }
+}
+
+.register_form {
+  text-align: left;
+  p {
+    text-align: center;
+  }
+
+  .pwd_rules {
+    font-size: small;
+  }
+}
+
+.edit_post_area {
+  .post_form {
+    position: relative;
+    top: -20px;
+    border: none !important;
+    textarea {
+      position: relative;
+      left: 15px;
+    }
+    label {
+      color: $text-color;
+      margin-left: 25px;
+    }
+    img {
+      width: 50px;
+      float: left;
+    }
+    .change_file {
+      display: inline-block;
+      float: left;
+      position: relative;
+      top: -50px;
+      left: 60px;
+    }
+
+    .cancel_btn {
+      margin-left: 15px;
+      background-color: $label-color;
+      border-color: $label-color;
+      a {
+        color: white;
+      }
+    }
+    @media (max-width: 682px) {
+      img {
+        float: none;
+      }
+      .change_file {
+        float: none;
+        top: 10px;
+        left: 0;
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .edit_post_area {
+    margin-top: 20px;
+    .heading {
+      z-index: 90;
+      position: relative;
+      margin: auto;
+      width: 250px;
+    }
+    .post_form {
+      width: 100%;
+      textarea {
+        margin-left: 0;
+        left: 0;
+      }
+      .cancel_btn {
+        position: relative;
+        top: -4px;
+      }
+      .change_file {
+        width: 95%;
+        position: relative;
+        margin: auto;
+      }
+    }
+  }
+
+  .register_area {
+    padding-top: 20px;
+    .register_form {
+      text-align: center;
+      position: relative;
+      width: 95%;
+      margin: auto;
+      .showIcon {
+        position: absolute;
+        right: 35px;
+      }
+    }
+  }
+
+  .sign-in_area {
+    margin-top: 20px;
+    .heading {
+      z-index: 90;
+      position: relative;
+    }
+  }
+
+  form {
+    text-align: center;
+    label {
+      display: none;
+    }
+    label[for="image"] {
+      display: block !important;
+      text-align: center;
+      margin-left: 0;
+      position: relative;
+      left: -15px;
+    }
+    input,
+    textarea {
+      margin-bottom: 10px;
+      max-width: 100%;
+      margin-left: 0;
+    }
+    input::placeholder {
+      color: rgba($label-color, $alpha: 0.65);
+    }
+  }
+  .showIcon {
+    position: absolute;
+    right: 5px;
+  }
+}
